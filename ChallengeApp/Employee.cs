@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 
 namespace ChallengeApp
     {
@@ -37,6 +32,23 @@ namespace ChallengeApp
             {
                 this.score.Add(score);
             }
+        public Statistics GetStatistics()
+        {
+            var statistics  = new Statistics();
+            statistics.Average = 0;
+            statistics.Max = float.MaxValue;
+            statistics.Min = float.MinValue;
+            
+            foreach (var score in this.score)
+            {
+                statistics.Max = Math.Max(statistics.Max, score);
+                statistics.Min = Math.Min(statistics.Min, score);
+                statistics.Average += score;
+            }
+            statistics.Average /= this.score.Count;
+            return statistics;
+
+        }
 
 
         }

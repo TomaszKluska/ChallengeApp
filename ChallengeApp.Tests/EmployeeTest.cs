@@ -1,4 +1,8 @@
+
+using NUnit.Framework;
+
 namespace ChallengeApp.Tests
+
 {
     public class Tests
     {
@@ -18,6 +22,7 @@ namespace ChallengeApp.Tests
 
             //act
             var result =employee3.Result;
+            
 
             //assert
             Assert.AreEqual(15, result);

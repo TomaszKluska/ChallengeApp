@@ -21,7 +21,18 @@ employee3.AddScore(5);
 employee3.AddScore(8);
 employee3.AddScore(6);
 employee3.AddScore(5);
-employee3.AddScore(2);
+employee3.AddScore(9);
+
+
+//interpolacja stringow
+var statistics =employee1.GetStatistics();
+
+
+Console.WriteLine($"Average: {statistics.Average:N2}");
+Console.WriteLine($"Min: {statistics.Min}");
+Console.WriteLine($"Max: {statistics.Max}"); 
+
+
 
 List<Employee> employees = new List<Employee>()
 {

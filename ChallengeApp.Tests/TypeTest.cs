@@ -1,4 +1,6 @@
-﻿namespace ChallengeApp.Tests
+﻿using NUnit.Framework;
+
+namespace ChallengeApp.Tests
 {
     public class TypeTest
     {
@@ -17,19 +19,19 @@
         public void GetStringValues_ShouldReturnEquals()
         {
             //arrange
-            string employee1 = ("Adamus");
-            string employee3 = ("Adamus");
+            string employee1 = ("Jan");
+            string employee3 = ("Adam");
 
             //assert
-            Assert.AreEqual(employee1, employee3);
+            Assert.AreNotEqual(employee1, employee3);
         }
 
         [Test]
         public void GetFloatValues_ShouldReturnEquals()
         {
             //arrange
-            float float1 = 8.5f;
-            float float2 = 8.5f;
+            float float1 = 7.4f;
+            float float2 = 7.4f;
 
             //assert
             Assert.AreEqual(float1, float2);
