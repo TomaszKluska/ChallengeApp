@@ -1,10 +1,11 @@
 
 using NUnit.Framework;
 
+
 namespace ChallengeApp.Tests
 
 {
-    public class Tests
+    public class EmployeeTests
     {
         
 
@@ -12,20 +13,21 @@ namespace ChallengeApp.Tests
         public void WhenEmployye3AddScore_ShouldResultSum()
         {
             //arrange
-            var employee3 = new Employee("Adam ", "Kaminski",21);
+            var employee3 = new Employee("Adam ", "Kaminski", 21);
 
             employee3.AddScore(5);
             employee3.AddScore(8);
             employee3.AddScore(6);
-            employee3.AddScore(5);
-            employee3.AddScore(-9);
+          //  employee3.AddScore(5);
+           // employee3.AddScore(-9);
 
             //act
-            var result =employee3.Result;
-            
+            var statistics = employee3.GetStatistics();
+
 
             //assert
-            Assert.AreEqual(15, result);
+            Assert.AreEqual(Math.Round(6.33, 2), Math.Round(statistics.Average, 2));
+           
         }
     }
 }

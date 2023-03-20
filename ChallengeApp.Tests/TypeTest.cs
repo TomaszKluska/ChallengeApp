@@ -35,6 +35,8 @@ namespace ChallengeApp.Tests
 
             //assert
             Assert.AreEqual(float1, float2);
+
+            
         }
     }
 }
